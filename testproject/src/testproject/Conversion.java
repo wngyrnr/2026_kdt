@@ -18,11 +18,18 @@ public class Conversion {
 		int num = (int)pi;
 		System.out.println(num);
 		
+		
+		//long에서 int변환시 메모리 기준으로 자르기 때문에 연관성이 없는 숫자가 나온다. 
 		long longNum = 30000000000000007L;
 		int intNum = (int)longNum;
 		System.out.println(intNum);
 		
-		
+		char ch = 'a';
+		System.out.println("a : "+ ch);
+		System.out.println("a : " + (int)ch);
+		System.out.println("b : " + (ch+1));
+		System.out.println("b : " + (char)(ch +1 ));
+		System.out.println("b : " + (char)(ch +1 ));
 
 	}
 
