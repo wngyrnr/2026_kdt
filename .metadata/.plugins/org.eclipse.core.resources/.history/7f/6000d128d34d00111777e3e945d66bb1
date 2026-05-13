@@ -1,0 +1,16 @@
+package testproject;
+
+public class Variable {
+
+	public static void main(String[] args) {
+		
+		//정수형 변수
+		int num;
+		
+		// 정수형 변수 num에 10이라는 값을 대
+		num = 10;
+		
+		System.out.println(num);
+	}
+	 
+}
