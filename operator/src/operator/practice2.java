@@ -25,21 +25,12 @@ public class practice2 {
 		System.out.println("두번째 정수 : ");
 		int num2 = sc.nextInt();
 		
-		System.out.println(num1 + num2);
-		System.out.println(num1 - num2);
-		System.out.println(num1 * num2);
-		if(num2 < num1) {
-			System.out.println(num1 / num2);
-			}else {
-				System.out.println(num2 / num1);
-			}
+		System.out.println("더하기 : " + (num1 + num2));
+		System.out.println("빼기 : " + (num1 - num2));
+		System.out.println("곱하기 : " + (num1 * num2));
+		System.out.println("나누기 : " + (num1 / num2));
+		System.out.println("나머지 : " + (num1 % num2));
 		
-		if(num2 < num1) {
-		System.out.println(num1 % num2);
-		}
-		else {
-			System.out.println(num2 % num1);
-		}
 	}
 
 }

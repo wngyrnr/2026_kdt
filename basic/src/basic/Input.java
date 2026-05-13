@@ -1,4 +1,4 @@
-package testproject;
+package basic;
 
 import java.util.Scanner;
 
