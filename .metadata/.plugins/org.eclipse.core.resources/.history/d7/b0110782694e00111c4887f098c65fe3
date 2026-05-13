@@ -83,41 +83,6 @@ public class Variable {
 		// \n	: 개
 		System.out.println("이름\nt나이\n주소");
 		
-		
-		
-		/*
-		 * 
-		 */
-		
-		final int MY_AGE;
-		MY_AGE = 10;
-		/*
-		 * 프로그래밍에서 이름 짓는 방식
-		 * 1. 카멜케이스 : 단어를 나열할 때 두번째 단어부터는 단어의 첫글자를 대문자로 시작.
-		 * ex) userName, totalCount
-		 *  -> 자바에서 모든 함수명, 변수명 
-		 * 
-		 * 2. 파스탈케이스 : 카멜케이스에서 첫글자까지 대문자로 작성 
-		 * ex) UserName, TotalCount
-		 * -> 자바에서 클래스명에 사용 
-		 * 
-		 * 
-		 * 3. 스네이크케이스 : 문자와 문자사이를 _를 통해서 이어주는 것
-		 *  ex) user_name, total_count
-		 * ->파이썬, 자바스크립트에서 많이 사용
-		 * 
-		 * 4. 대문자스네이크케이스
-		 * ex) USER_NAME
-		 * ->대부분 언어에서 상수명
-		 * 
-		 * 5. 케밥케이스 : 단어는 소문자로 작성하되 문자와 문자사이를 하이픈으로 구성
-		 *  ex) user-name, total-count
-		 *  -> html에서 속성, url, 설정파일
-		 *  
-		 */
-		
-		
-		
 	}
 	 
 }
