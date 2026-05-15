@@ -24,7 +24,7 @@ public class Practice5 {
 		n = sc.nextInt();//입력받아 n이라는 변수에 넣어주는 코드
 		
 		while(n!=0) { //0이 아닐때 까지 반복해라
-			int j = (int)(Math.random() * 100) + 1; // j라는 변수에 랜덤한 값 넣기
+			 int j = (int)(Math.random() * 100) + 1; // j라는 변수에 랜덤한 값 넣기
 			System.out.print("랜덤값 :" + j + " ");	// 랜덤값을 출력해주는 코드
 				sum+=j;								// 랜덤값을 sum이라는 변수에 저장
 				System.out.print("랜덤값 누적 :" + sum + " "); //랜덤값이 저장된 sum이라는 변수를 출
