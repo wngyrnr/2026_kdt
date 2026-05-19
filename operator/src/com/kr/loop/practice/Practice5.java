@@ -35,6 +35,7 @@ public class Practice5 {
 		}
 		
 		System.out.println("정수의 합 :"+sum);
+		sc.close();
 	}
 
 }

@@ -31,9 +31,13 @@ public class Practice6 {
 		for(int i = 1; i<11; i++) {
 			System.out.print(i+".정수를 입력해주세요. :");
 			num = sc.nextInt();
-				if(num%2==1) {continue;}
+				
+				if(num%2==1) {continue;}//홀수인경우
+		
 			System.out.printf("숫자 %d의 제곱은 %d입니다.\n",num,num*num);
 				
+			
+			sc.close();
 		}
 
 	}

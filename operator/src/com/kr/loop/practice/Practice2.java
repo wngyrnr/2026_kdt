@@ -49,6 +49,7 @@ public class Practice2 {
 			}else {
 				System.out.println("No");
 			}
+			sc.close();
 		
 	}
 /*260000  4

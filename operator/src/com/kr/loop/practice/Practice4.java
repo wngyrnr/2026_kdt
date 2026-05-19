@@ -9,7 +9,7 @@ public class Practice4 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		for(int i=1; i<101; i++) {
+		for(int i=1; i<101; i++) {//내가 풀었던 방법
 			
 			if(i%7==0) {
 			
@@ -18,6 +18,14 @@ public class Practice4 {
 			System.out.print(i+" ");
 			}
 		
+		}
+		for(int i=1; i<101; i++) {//강사님 방법
+					
+			if(i%7!=0||i%2==0) { 
+					
+				continue;}
+						
+			System.out.print(i+" ");
 		}
 
 	}

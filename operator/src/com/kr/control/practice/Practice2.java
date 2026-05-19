@@ -19,16 +19,16 @@ public class Practice2 {
 		n2 = sc.next().charAt(0);
 		n3 = sc.next().charAt(0);
 		
-		if(n1 == n2 && n2==n3) {
+		if(n1 == n2 && n2==n3) { //눈금 3개가 전부 같을 때
 			System.out.println(10000+(n3*1000)+"원");
-		}else if (n1==n2 || n1==n3) {
+		}else if (n1==n2 || n1==n3) {//눈금이 2개만 같을 때 
 			System.out.println(10000+(n1*100)+"원");
 			
-		}else if (n2==n3) {
+		}else if (n2==n3) {//눈금이 2개만 같을 때 마지막 경우의 수
 			System.out.println(10000+(n1*100)+"원");
-		}else {
-			int max = n1>n2 ? n1 : n2;
-			max = max > n3 ? max : n3;
+		}else {// 눈금이 전부 다를 때
+			int max = n1>n2 ? n1 : n2;  //눈금 n1 > n2 비교해서 max변수에 값을 저장
+			max = max > n3 ? max : n3;	//위에서 비교했던 max값이 n3랑 비교하는 코드
 		}
 		
 		/*if(one==two) {
