@@ -21,7 +21,6 @@ public class practice4 {
 				
 			 */
 		
-		
 		int[] stu = new int[30];
 		
 		System.out.println("학생 번호 입력 :");
@@ -46,25 +45,8 @@ public class practice4 {
 }
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
+
 //		int[] students = new int[30];
 //		System.out.print("학생의 번호를 입력하세요 :");
 //		

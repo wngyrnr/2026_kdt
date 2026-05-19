@@ -15,32 +15,16 @@ public class practice3 {
 	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("바구니 개수 입력 : ");
 		int n = sc.nextInt();
-		System.out.println("공 개수 입력 :");
 		
 		int[] basket = new int[n];
+		int m = sc.nextInt();
 		
-		for(int i =0; i<n ; i++) {
-			int start = sc.nextInt();
-			int end = sc.nextInt();
-			int k = sc.nextInt();
-			System.out.println();
-			
-			for(int j = start; j<end; j++) {
-				basket[j-1] = k;
-				
+			for(int h =1; h<m; h++) {
+				int k = sc.nextInt();
 			}
-			
-			
-		}
-		for(int i = 0; i<basket.length; i++) {
-			System.out.println(basket[i] + " ");
-			
-		}
 		
 		
-
 	}
 
 }

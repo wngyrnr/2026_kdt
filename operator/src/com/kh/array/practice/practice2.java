@@ -11,7 +11,7 @@ public class practice2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int a = -1000000; //최솟값
-		int j = 1000000;//최댓값
+		int k = 1000000;//최댓값
 		System.out.print("정수의 개수를 입력하세요 :");//정수를 개수를 입력받아서 배열길이 설정
 		int arr = sc.nextInt();
 		int[] list = new int[arr];
@@ -23,24 +23,39 @@ public class practice2 {
 			list[i] = num;
 		}
 		
-		for (int i =0; i<list.length; i++) {//첫번째 정수부터...n번째 정수까지 최솟값 최댓값 구분
-			if(list[i]<j) {
-				a = list[i];
-			}
-		}
-			int max = a;
-
-			for (int i = 0; i<list.length; i++) {//첫번째 정수부터...n번째 정수까지 최솟값 최댓값 구분
-			
-				if(list[i]>a) {
+//		for (int i =0; i<list.length; i++) {//첫번째 정수부터...n번째 정수까지 최솟값 최댓값 구분
+//			if(list[i]<j) {
+//				a = list[i];
+//			}
+//		}
+//			int max = a;
+//
+//			for (int i = 0; i<list.length; i++) {//첫번째 정수부터...n번째 정수까지 최솟값 최댓값 구분
+//			
+//				if(list[i]>a) {
+//				
+//					a = list[i];
+//					
+//				}
+//					
+//			}
+		
+		for(int i = 0; i<list.length-1; i++) {
+			for(int j = 0; j<list.length-1-i; j++) {
 				
-					a = list[i];
-					
-				}
-					
+					if(list[j]>list[j+1]) {
+						int temp = list[j];
+						list[j] = list[j+1];
+						list[j+1] = temp;
+						
+					}
+				
 			}
-			int min = a;
-			System.out.printf("최솟값 : %d  최댓값 : %d",max,min);
+			
+		}
+			int min = list[0];
+			int max = list[arr-1];
+			System.out.printf("최솟값 : %d  최댓값 : %d",min,max);
 		}
 		
 	}

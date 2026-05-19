@@ -1,4 +1,4 @@
-package com.kh.array.practice; //프로그래머
+package com.kh.array.practice; //프로그리머
 
 import java.util.Scanner;
 
@@ -34,10 +34,12 @@ public class practice1 {
 			arr[i] = j;
 			
 		}
+		System.out.print("정수 x보다 작은 값 : ");
+		
 		for(int i=0; i<arr.length; i++) {
 			if(arr[i]<x) {//arr 값과 x크기 비교해서 출력하기
 				
-				System.out.print("정수 값보다 더 작은 값은 : " + arr[i] + " ");
+				System.out.print( arr[i] + " " );
 			}
 			
 		}
