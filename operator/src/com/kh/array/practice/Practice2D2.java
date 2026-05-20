@@ -6,14 +6,14 @@ public class Practice2D2 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+
+		
 		System.out.print(" 행 :");
 		int n = sc.nextInt();
 		System.out.print(" 열 :");
 		int m = sc.nextInt();
 		int[][] arr = new int[n][m];
-		int max =0;
-		int [][] point = new int[0][0];
-		
+		int max =Integer.MIN_VALUE;
 		
 		
 		for(int i =0; i<arr.length; i++) {//행,열 입력받기
@@ -23,30 +23,24 @@ public class Practice2D2 {
 				arr[i][j] = sc.nextInt();
 			}
 		}
-
+			
+		int x = 0;
+			int y = 0;
 		for(int i =0; i<arr.length; i++) {
 			System.out.println();
 			for(int j =0; j<arr[i].length; j++) {
 					if(max<arr[i][j]) {
 						max = arr[i][j];
+						x = i ;
+						y = j ;
 					}
 					
 			}
 			
-		}
-		for(int i =0; i<arr.length; i++) {
-			System.out.println();
-			for(int j =0; j<arr[i].length; j++) {
-					if(max==arr[i][j]) {
-						n=i;
-						m=j;
-					}
 		
-		
-			}
 		}
-		System.out.printf("최대값 : %d \n 위치 :%d %d",max,n+1,m+1);
-
+		System.out.printf("최대값 : %d \n 위치 :%d %d",max,x+1,y+1);
+		sc.close();
 	}
 
 }

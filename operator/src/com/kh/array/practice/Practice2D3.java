@@ -42,21 +42,21 @@ public class Practice2D3 {
 				
 				
 			}
-			int num1=0;
+			
+			
+			int area=0;
 			for(int i = 0; i<99; i++) {
+				
 				for(int j =0; j<99;j++) {
 					int a  = squre[i][j];
 					if(a>=1) {
-						num1+=1;
+						area++;
+					
 					}
 			}
 			
 		}
-		System.out.println(num1);
-		
-		
-			
-		
+		System.out.println(area);
 
 	}
 
