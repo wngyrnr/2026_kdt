@@ -12,11 +12,13 @@ package com.kh.object.ex1;
  */
 
 public class Student {
+	//필드
 	String name;
 	int age;
 	
 	
 	//생성자
+	
 	
 	//기능
 	// 내 정보를 출력하는 기능
