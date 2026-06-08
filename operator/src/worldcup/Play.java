@@ -32,10 +32,12 @@ public class Play extends PlayerManager{
 		public void PrintPlayer() {
 			while(true) {
 			System.out.println("=======2026 월드컵 대한민국 선수명단=======");
-			System.out.println("1.선수 추가");
-			System.out.println("2.선수 삭제(등번호 입력)");
+			System.out.println("1. 선수 추가");
+			System.out.println("2. 선수 삭제(등번호 입력)");
 			System.out.println("3. 선수 이름으로 검색");
-			System.out.println("4. 선수 명단 출력");
+			System.out.println("4. 선수 명단 수정");
+			System.out.println("5. 포지션별 인원수");
+			System.out.println("6. 선수 명단 출력");
 			System.out.println("9. 종료");
 			System.out.println("입력 : ");
 			int num = sc.nextInt();
@@ -65,6 +67,16 @@ public class Play extends PlayerManager{
 				pm.PlayerSearch(Pname);
 				break;
 			case 4:
+				System.out.println("선수 등번호 검색 : ");
+				int num1 = sc.nextInt();
+				pm.PlayerUpdate(num1);
+				break;
+			case 5:
+				System.out.println("포지션 입력(GK / DF / MF / FW) : ");
+				String position1 = sc.next();
+				pm.PositionSearch(position1);
+				break;
+			case 6:
 				pm.PlayerAll();
 				break;
 			case 9:
