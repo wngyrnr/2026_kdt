@@ -1,0 +1,342 @@
+/* 기본 스타일 초기화 및 부드러운 스크롤 */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+html {
+    /* 스크롤을 부드럽게 하기위해 작성 */
+    scroll-behavior: smooth;
+}
+
+
+/* 기본설정 */
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+/* 1. 배경 설정 (고정 및 전체 화면 채우기) */
+
+body {
+    /* 뒤에 고정할 사진 설정 */
+    background-image: url('../public/background.png');
+    background-size: cover;
+    background-position: center;
+    /* 이미지 반복 설정x */
+    background-repeat: no-repeat;
+    /* 배경 고정 핵심 속성 */
+    background-attachment: fixed;
+    /* 폰트설정 */
+    font-family: 'Noto Serif KR', serif;
+    font-optical-sizing: auto;
+    color: #333;
+}
+
+
+/* 2. 바디 부분 흰색 박스 만들기 (중앙 정렬 및 내용만 스크롤) */
+
+.wrapper {
+    max-width: 700px;
+    /* 본문 박스의 최대 가로 너비 */
+    margin: 0 auto;
+    /* 화면 중앙 정렬 */
+    background-color: rgba(255, 255, 255, 0.95);
+    /* 완전 흰색 또는 약간 투명한 흰색 */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* 3. 상단 메뉴(Header) 고정 및 가로 정렬 */
+
+.header {
+    position: fixed;
+    /* 상단 고정 */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* 화면 중앙 정렬 */
+    width: 100%;
+    /* [핵심] 본문 박스(700px)와 가로 폭을 완벽하게 일치시킵니다. */
+    max-width: 700px;
+    height: 70px;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    /* 로고는 왼쪽, 메뉴는 오른쪽 끝으로 배치 */
+    align-items: center;
+    padding: 0 5%;
+    z-index: 1000;
+    box-sizing: border-box;
+    /* 패딩이 너비에 영향을 주지 않도록 잠금 */
+}
+
+.logo {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.nav-list ul {
+    display: flex;
+    gap: 20px;
+    /* 메뉴 간격 */
+}
+
+.nav-list a {
+    color: #fff;
+    font-size: 15px;
+    transition: color 0.3s;
+    transition: font-size 0.5s;
+}
+
+.nav-list a:hover {
+    color: #ff3366;
+    font-size: 18px;
+    /* 마우스 올렸을 때 포인트 컬러 */
+}
+
+
+/* 4. 본문 영역 여백 설정 (상단 헤더 높이만큼 띄워주기) */
+
+.main-content {
+    padding: 100px 40px 40px 40px;
+    /* 위쪽에 100px 여백을 줘서 헤더와 안 겹치게 함 */
+    flex: 1;
+    /* 푸터를 하단에 밀어내기 위한 설정 */
+}
+
+
+/* 본문 텍스트 및 가독성 레이아웃 추가 */
+
+section {
+    margin-bottom: 50px;
+    /* 
+       이 속성을 추가하면 헤더(70px) 뒤로 제목이 파묻히지 않고, 
+       정확히 헤더 바로 아래에 제목이 딱 걸치게 멈춥니다.
+    */
+    scroll-margin-top: 70px;
+}
+
+section h1,
+section h2 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #333;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+p {
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+
+/* 앨범 트랙리스트 정렬 스타일 */
+
+.track_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 50px;
+}
+
+.track_list li {
+    margin: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.track_list img {
+    max-height: 300px;
+    max-width: 300px;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+}
+
+
+/* 갤러리 섹션 레이아웃 */
+
+.Gallery {
+    margin-bottom: 60px;
+}
+
+
+/* 2열 구조를 만드는 Grid 핵심 설정 */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 가로로 동일한 비율의 2개 열 생성 */
+    gap: 20px;
+    /* 사진과 사진 사이의 간격 */
+    margin-top: 20px;
+}
+
+
+/* 각 이미지 박스 스타일 */
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    /* 모서리를 부드럽게 둥글리기 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* 은은한 그림자 효과 */
+    background-color: #f9f9f9;
+}
+
+
+/* 이미지 반응형 설정 및 마우스 호버 효과 */
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    /* 이미지 높이 통일 (필요시 조절 가능) */
+    object-fit: cover;
+    /* 비율을 유지하며 박스에 꽉 차게 채움 */
+    display: block;
+    transition: transform 0.3s ease;
+    /* 마우스 올렸을 때 부드러운 애니메이션 효과 */
+}
+
+
+/* 마우스를 올렸을 때 사진이 살짝 확대되는 효과 */
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+
+/* 5. Footer 아이콘 중앙 정렬 */
+
+footer {
+    background-color: #111;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    /* 가로 기준 중앙 정렬 */
+    align-items: center;
+    gap: 30px;
+    /* 아이콘 사이 간격 */
+    border-top: 1px solid #ddd;
+}
+
+footer img {
+    width: 35px;
+    /* 아이콘 크기 적절하게 조정 */
+    height: 35px;
+    object-fit: contain;
+    background: #eee;
+    transition: transform 0.2s;
+    border-radius: 10px;
+}
+
+footer img:hover {
+    transform: scale(1.1);
+    /* 마우스 올리면 살짝 커지는 효과 */
+}
+
+.list a {
+    text-decoration: none;
+    transition: color 0.3s;
+    transition: font-size 0.5s;
+}
+
+.list a:link {
+    color: #111;
+    /*기본색상 변경*/
+}
+
+.list a:visited {
+    /*요즘은 방문한적 있는 링크 글자색을 기본색과 동잃하게 하는경우가 대부분*/
+    color: #111;
+}
+
+.list a:hover {
+    color: #ff3366;
+    font-size: 17px;
+}
+
+.my_review strong {
+    color: #ff3366;
+    /* 마우스 호버 시 사용했던 포인트 컬러 */
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+        /* 높이를 콘텐츠에 맞게 자동으로 조절 */
+        padding: 15px 20px;
+        flex-direction: column;
+        /* 로고와 메뉴를 세로 2줄로 배치 */
+        gap: 10px;
+        /* 로고와 메뉴 사이의 간격 */
+    }
+    .nav-list ul {
+        gap: 15px;
+        /* 모바일에서는 메뉴 간격을 조금 좁게 */
+    }
+    .nav-list a {
+        font-size: 14px;
+        /* 글자 크기 살짝 축소 */
+    }
+    /* 헤더가 늘어난 만큼 본문이 가려지지 않도록 상단 여백 추가 조절 */
+    .main-content {
+        padding-top: 130px !important;
+    }
+    /* 스크롤 이동 시 멈추는 위치도 늘어난 헤더 높이에 맞춤 */
+    section {
+        scroll-margin-top: 110px !important;
+    }
+}
+
+
+/* 옵션 2를 선택할 경우, CSS 맨 하단에 이 미디어 쿼리만 추가해 주세요 */
+
+.logo {
+    font-size: 20px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    /* 화면이 좁아져도 로고가 밑으로 줄바꿈되지 않게 방지 */
+}
+
+.nav-list ul {
+    display: flex;
+    gap: 25px;
+    /* 데스크톱 환경이므로 메뉴 간격을 조금 더 여유 있게 조정 */
+}
+
+.nav-list li {
+    display: inline-block;
+}
+
+.nav-list a {
+    color: #fff;
+    font-size: 15px;
+    white-space: nowrap;
+    /* 메뉴 글자가 아래로 꺾이는 현상 방지 */
+    transition: color 0.3s, font-size 0.3s;
+    /* 애니메이션 속도 일치 */
+}
+
+.nav-list a:hover {
+    color: #ff3366;
+    font-size: 17px;
+    /* 마우스 올렸을 때 글자가 커져도 반응형 레이아웃 내에서 유연하게 대처 */
+}
