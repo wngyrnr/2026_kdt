@@ -16,7 +16,7 @@ public class Variable {
 		
 		//참과 거짓을 표현하는 자료형으로 isTure라는 이름의 변수를 선언
 		boolean isTrue = false; //선언과 동시에 값을 대입
-		
+	
 		isTrue = true;
 		System.out.println(isTrue);
 		

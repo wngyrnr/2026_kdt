@@ -42,24 +42,7 @@ public class Player {
 	public void setBacknumber(int backnumber) {
 		this.backnumber = backnumber;
 	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(backnumber, name, position);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Player other = (Player) obj;
-		return backnumber == other.backnumber && Objects.equals(name, other.name)
-				&& Objects.equals(position, other.position);
-	}
+	
 
 	@Override
 	public String toString() {

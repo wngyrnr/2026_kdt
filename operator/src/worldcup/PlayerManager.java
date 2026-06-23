@@ -53,16 +53,21 @@ public class PlayerManager{
 		}System.out.println("찾을 수 없습니다.");
 	}
 	
-	public void PositionSearch(String position) {//포지션별 총 인원수
+	/*public void PositionSearch(String position) {//포지션별 총 인원수
 		int num = 0;
+		
 		for(Player player : PlayerList) {
 			
+			if(!player.getPosition().equalsIgnoreCase(position)) {
+				System.out.println("잘못된 포지션 입력");
+				break;
+			}
 			if(player.getPosition().equals(position)) {
 				num++;
 			}
 		}
 		System.out.println(position+"인원 : " + num);
-	}
+	}*/
 	
 	
 	
@@ -73,7 +78,7 @@ public class PlayerManager{
 		String nm = sc.next();
 		System.out.print("포지션 : ");
 		String position = sc.next();
-		System.out.print("등번호 : ");
+		System.out.print("등번호 : ")
 		int num1 = sc.nextInt();
 		player.setName(nm);
 		player.setBacknumber(num1);

@@ -36,8 +36,7 @@ public class Play extends PlayerManager{
 			System.out.println("2. 선수 삭제(등번호 입력)");
 			System.out.println("3. 선수 이름으로 검색");
 			System.out.println("4. 선수 명단 수정");
-			System.out.println("5. 포지션별 인원수");
-			System.out.println("6. 선수 명단 출력");
+			System.out.println("5. 선수 명단 출력");
 			System.out.println("9. 종료");
 			System.out.println("입력 : ");
 			int num = sc.nextInt();
@@ -71,12 +70,8 @@ public class Play extends PlayerManager{
 				int num1 = sc.nextInt();
 				pm.PlayerUpdate(num1);
 				break;
+			
 			case 5:
-				System.out.println("포지션 입력(GK / DF / MF / FW) : ");
-				String position1 = sc.next();
-				pm.PositionSearch(position1);
-				break;
-			case 6:
 				pm.PlayerAll();
 				break;
 			case 9:
