@@ -1,8 +1,5 @@
-function createStore(inital = 0){
-        let value = inital;//value에는 외부접근 불가능
-        return{
-            get: () => value,
-            set: () => {value = v;},
-            increase : () =>{value++; return value;}
-        }
-    }
+for (let j = 1; j <= 10; j++) {
+    if (j === 5) continue;
+    if (j === 8) break;
+    console.log(j);
+}
