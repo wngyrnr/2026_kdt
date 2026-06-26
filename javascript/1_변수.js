@@ -132,3 +132,5 @@ console.log(jiwon.age);
 const arr = ['초록', '파랑'];
 const arr2 = [];
 arr = [3];
+
+//?, 옵셔널 : 갑싱 없으면ㅇ 에러없에 undefined반환
