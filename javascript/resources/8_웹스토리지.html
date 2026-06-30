@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .area {
+            border: 1px solid #333;
+            width: 300px;
+            min-height: 50px;
+            padding: 8px;
+            margin: 8px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>웹 스토리지</h1>
+    <p>
+        브라우저에 데이터를 key-value로 저장하는 공간<br> -localStorage : 영구저장(브라우저를 받아도 유지) -sessionStorage : 탭 단위 저장(탭을 닫으면 사라짐) 메서드 : setItem (key,value),getItem(key), removeItem(key), clear() 웹스토리지는 '문자열'만 저장이 가능
+    </p>
+
+    <h3>-localStorage 저장/조회/삭제</h3>
+    값 : <input type="text" id="memo-input" placeholder="저장할 값">
+    <button onclick="saveMemo()">저장</button>
+    <button onclick="loadMemo">조회</button>
+    <button onclick="removememo">삭제</button>
+    <div id="area1" class="area"></div>
+    <script>
+        function saveMemo() {
+            const memo = document.querySelector("#memo-input").value;
+            localStorage.setItem("memo", memo);
+            document.querySelector("#area1").textContent = "저장완료" + memo;
+        }
+
+        function loadMemo() {
+            const memo = locaStorage.getItem('memeo');
+            document.querySelector('#area1').textContent = "조회 결과: " + memo;
+        }
+
+        function removememo() {
+            document.removememo("#area1").textContent = "삭제 완료";
+        }
+    </script>
+    <h3>2) 객체저장 - json형태로 변환</h3>
+    이름 : <input type="text" id="user-name" 나이 : <input type="text" id="user-age" <button onclick="saveUser()">객체 저장</button>
+    <div id="area2" class="area" </div>
+        <script>
+            function saveUser() {
+                const user = {
+                    name: document.querySelector("#user - name").value,
+                    age: document.querySelector("#user - age").value,
+                }
+                localStorage.setItem("user", JSON.stringify(user));
+                document.querySelector("#area2");
+            }
+
+            function loadUser() {
+                const savedUser = JSON.parse(localStorage.getItem("user"));
+                if (saveUser) {
+                    document.querySelector("#area2").textContent =
+                        이름: $ {
+                            saveUser.name
+                        }, 나이 $ {
+                            asavedUser
+                        }
+                }
+            }
+        </script>
+</body>
+
+</html>
